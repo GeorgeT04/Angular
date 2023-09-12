@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href="app.component.css" type="text/css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -18,14 +17,14 @@
 
         <div class="menu-bar">
             <div class="menu">
-                <li class="search-box">
+                <!--<li class="search-box">
                     <i class="bx bx-search icon"></i>
                     <input type="text" placeholder=" Buscar...">
-                </li>
+                </li>-->
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="../dashboard/app.component.html">
+                        <a href="app.component.html">
                             <i class="bx bx-home-alt icon"></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
@@ -55,10 +54,10 @@
                 <li class="">
                     <a href="../app.component.html">
                         <i class="bx bx-log-out icon"></i>
-                        <span class="text nav-text">Salir</span>
+                        <span (click)="logOut()" class="text nav-text">Salir</span>
                     </a>
                 </li>
-                <li class="mode">
+                <!--<li class="mode">
                     <div class="sun-moon">
                         <i class="bx bx-moon icon moon"></i>
                         <i class="bx bx-sun icon sun"></i>
@@ -67,7 +66,7 @@
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
-                </li>
+                </li>-->
             </div>
         </div>
     </nav>
@@ -75,18 +74,15 @@
     <section class="home">
         <div class="flip-card">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="../../www/assets/image/padel-1.jpg" />
-                </div>
-                <div class="flip-card-back">
-                    <img src="../../www/assets/image/padel-1.jpg" />
-                    <h3>Wilson Cupra Beta</h3>
-                    <h1>23€</h1>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>Dashboard</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
