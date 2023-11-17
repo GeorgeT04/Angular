@@ -10,6 +10,7 @@ import { AuthGuard } from './utils/auth.guard';
 import { AnaliticaComponent } from './pages/analitica/analitica.component';
 import { NotificacionComponent } from './pages/notificacion/notificacion.component';
 import { GananciaComponent } from './pages/ganancia/ganancia.component';
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'analitica', component: AnaliticaComponent},
   {path: 'ganancia', component: GananciaComponent},
   {path: 'notificacion', component: NotificacionComponent},
+  {path: 'users', component: UsersComponent},
   {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 

@@ -41,12 +41,18 @@
                             <span class="text nav-text">Analitica</span>
                         </a>
                     </li>
+                    <li class="nav-link">
+                        <a routerLink="/users" routerLinkActive="active-link">
+                            <i class="bx bx-user icon"></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="../app.component.html">
+                    <a routerLink="/login" routerLinkActive="active-link">
                         <i class="bx bx-log-out icon"></i>
                         <span (click)="logOut()" class="text nav-text">Salir</span>
                     </a>

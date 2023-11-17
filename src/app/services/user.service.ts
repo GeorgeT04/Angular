@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../interface/user';
 import { Observable } from 'rxjs';
 
@@ -25,5 +25,11 @@ export class UserService {
    login(user: User): Observable<string>{
     return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}/login`, user);
    }
+
+  //  getUsers(): Observable<User[]> {
+  //   const token = localStorage.getItem('token')
+  //   const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+  //   return this.http.get<User[]>(`${this.myAppUrl}${this.myApiUrl}`,  { headers: headers })
+  //  }
 
 }

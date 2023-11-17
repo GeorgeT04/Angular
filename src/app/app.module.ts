@@ -16,7 +16,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GananciaComponent } from './pages/ganancia/ganancia.component';
 import { NotificacionComponent } from './pages/notificacion/notificacion.component';
 import { AnaliticaComponent } from './pages/analitica/analitica.component';
-import { CardMovieComponent } from './pages/card-movie/card-movie.component'; 
+import { CardMovieComponent } from './pages/card-movie/card-movie.component';
+import { UsersComponent } from './pages/users/users.component'; 
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CardMovieComponent } from './pages/card-movie/card-movie.component';
     GananciaComponent,
     NotificacionComponent,
     AnaliticaComponent,
-    CardMovieComponent
+    CardMovieComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

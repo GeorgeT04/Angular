@@ -32,5 +32,10 @@ export class AnaliticaComponent implements OnInit{
     localStorage.removeItem('token');
     this.router.navigate(['/notificacion']);
   }
+  
+  users() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/users']);
+  }
 
 }
