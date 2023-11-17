@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import { Observable, Subscription, debounceTime, distinct, filter, fromEvent, map, switchMap, tap } from 'rxjs';
 import { Movie } from 'src/app/interface/movies';
 import { MovieService } from 'src/app/services/movies.services';
-import { Product } from 'src/app/interface/product';
-import { ProductService } from 'src/app/services/product.service';
 
 
 @Component({
@@ -18,16 +16,11 @@ export class DashboardComponent implements OnInit{
   @ViewChild('movieSearchInput', {static: true}) movieSearchInput!: ElementRef;
   movies$!: Observable<Movie[]>
 
-  listProduct: Product[] = [];
-  @ViewChild('productSearchInput', {static: true}) productSearchInput!: ElementRef;
-  product$!: Observable<Product[]>
-
   constructor (private router: Router,
-               private movieService: MovieService,
-               private _productService: ProductService) {  }
+               private movieService: MovieService) {  }
 
   ngOnInit(): void {
-    this.product$ = fromEvent<Event>(this.productSearchInput.nativeElement, 'keyup').pipe(
+    this.movies$ = fromEvent<Event>(this.movieSearchInput.nativeElement, 'keyup').pipe(
       map((event: Event) => {
         const searchTerm = (event.target as HTMLInputElement).value;
         return searchTerm;
@@ -35,7 +28,7 @@ export class DashboardComponent implements OnInit{
       filter((searchTerm: string) => searchTerm.length > 3),
       debounceTime(500),
       distinct(),
-      switchMap((searchTerm: string) => this._productService.getProduct(searchTerm))
+      switchMap((searchTerm: string) => this.movieService.getMovies(searchTerm))
       )
   }
 
@@ -63,5 +56,12 @@ export class DashboardComponent implements OnInit{
     localStorage.removeItem('token');
     this.router.navigate(['/users']);
   }
+
+  // getMovies(searchTerm: string){
+  //   this.movieService.getMovies(searchTerm).subscribe(movies => {
+  //     console.log(movies);
+  //     this.movies = movies  !== undefined ? movies : [];
+  //  })
+  // }
 
 }
