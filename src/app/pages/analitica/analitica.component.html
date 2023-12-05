@@ -4,85 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
+<body class="body">
 
-    <nav class="sidebar close">
-        <header>
-            <!--<div class="text logo">
-                <span class="name"> Siters </span>
-            </div>
-            <i  class="bx bx-menu toggle"></i>-->
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <!--<li class="search-box">
-                    <i class="bx bx-search icon"></i>
-                    <input type="text" placeholder=" Buscar...">
-                </li>-->
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a routerLink="/dashboard" routerLinkActive="active-link">
-                            <i class="bx bx-home-alt icon"></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/ganancia" routerLinkActive="active-link">
-                            <i class="bx bx-bar-chart-alt-2 icon"></i>
-                            <span class="text nav-text">Ganancia</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/notificacion" routerLinkActive="active-link">
-                            <i class="bx bx-bell icon"></i>
-                            <span class="text nav-text">Notificación</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/users" routerLinkActive="active-link">
-                            <i class="bx bx-user icon"></i>
-                            <span class="text nav-text">Users</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a routerLink="/login" routerLinkActive="active-link">
-                        <i class="bx bx-log-out icon"></i>
-                        <span (click)="logOut()" class="text nav-text">Salir</span>
-                    </a>
-                </li>
-                <!--<li class="mode">
-                    <div class="sun-moon">
-                        <i class="bx bx-moon icon moon"></i>
-                        <i class="bx bx-sun icon sun"></i>
-                    </div>
-                    <span class="mode-text text">Modo Oscuro</span>
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>-->
-            </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="../../../www/assets/image/lobo.jpg">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/analitica">Analitica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/ganancia">Ganancia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/notificacion">Notificacion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/users">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/login">Salir</a>
+              </li>
+            </ul>
+          </div>
         </div>
     </nav>
 
-    <section class="home">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Analitica</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h1>Analitica</h1>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
